@@ -1,0 +1,51 @@
+menu.version=Version
+
+node_solar_328PB.name=Node Solar 328PB
+node_solar_328PB.upload.tool=arduino:avrdude
+node_solar_328PB.upload.protocol=arduino
+node_solar_328PB.upload.maximum_size=31744
+node_solar_328PB.upload.maximum_data_size=2048
+
+node_solar_328PB.bootloader.tool=arduino:avrdude
+node_solar_328PB.bootloader.low_fuses=0xFF
+node_solar_328PB.bootloader.high_fuses=0xDC
+node_solar_328PB.bootloader.unlock_bits=0xFF
+node_solar_328PB.bootloader.lock_bits=0xCF
+
+node_solar_328PB.build.mcu=atmega328pb
+node_solar_328PB.build.board=NODE_SOLAR_328PB
+node_solar_328PB.build.core=arduino:arduino
+node_solar_328PB.build.variant=node_solar_328pb
+
+##############################################################
+
+node_solar_328PB.menu.version.16mhz=Test UNO, 16MHz
+node_solar_328PB.menu.version.16mhz.upload.speed=9600
+node_solar_328PB.menu.version.16mhz.bootloader.extended_fuses=0xF4
+node_solar_328PB.menu.version.16mhz.bootloader.file=optiboot/optiboot_atmega328_16MHZ_SerialOverPower.hex
+node_solar_328PB.menu.version.16mhz.build.f_cpu=16000000L
+
+##############################################################
+
+node_solar_328PB.menu.version.20mhz=Actual, 12MHz
+node_solar_328PB.menu.version.20mhz.upload.speed=9600
+node_solar_328PB.menu.version.20mhz.bootloader.extended_fuses=0xF4
+node_solar_328PB.menu.version.20mhz.bootloader.file=optiboot/optiboot_atmega328_12MHZ_SerialOverPower.hex
+node_solar_328PB.menu.version.20mhz.build.f_cpu=12000000L
+
+##############################################################
+
+node_solar_328PB.build.extra_flags={build.i2c_flags} {build.spi_flags}
+
+menu.i2c=Default I2C bus
+node_solar_328PB.menu.i2c.twi0=TWI0
+node_solar_328PB.menu.i2c.twi0.build.i2c_flags=-DTWBR=TWBR0 -DTWSR=TWSR0 -DTWAR=TWAR0 -DTWDR=TWDR0 -DTWCR=TWCR0 -DTWAMR=TWAMR0 -DTWI_vect=TWI0_vect -DPIN_WIRE_SDA=PIN_WIRE_SDA0 -DPIN_WIRE_SCL=PIN_WIRE_SCL0
+node_solar_328PB.menu.i2c.twi1=TWI1
+node_solar_328PB.menu.i2c.twi1.build.i2c_flags=-DTWBR=TWBR1 -DTWSR=TWSR1 -DTWAR=TWAR1 -DTWDR=TWDR1 -DTWCR=TWCR1 -DTWAMR=TWAMR1 -DTWI_vect=TWI1_vect -DPIN_WIRE_SDA=PIN_WIRE_SDA1 -DPIN_WIRE_SCL=PIN_WIRE_SCL1
+
+menu.spi=Default SPI bus
+node_solar_328PB.menu.spi.spi0=SPI0
+node_solar_328PB.menu.spi.spi0.build.spi_flags=-DSPCR=SPCR0 -DSPSR=SPSR0 -DSPDR=SPDR0 -DPIN_SPI_SS=PIN_SPI_SS0 -DPIN_SPI_MOSI=PIN_SPI_MOSI0 -DPIN_SPI_MISO=PIN_SPI_MISO0 -DPIN_SPI_SCK=PIN_SPI_SCK0
+node_solar_328PB.menu.spi.spi1=SPI1
+node_solar_328PB.menu.spi.spi1.build.spi_flags=-DSPCR=SPCR1 -DSPSR=SPSR1 -DSPDR=SPDR1 -DPIN_SPI_SS=PIN_SPI_SS1 -DPIN_SPI_MOSI=PIN_SPI_MOSI1 -DPIN_SPI_MISO=PIN_SPI_MISO1 -DPIN_SPI_SCK=PIN_SPI_SCK1
+

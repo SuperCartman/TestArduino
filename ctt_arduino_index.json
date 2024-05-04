@@ -1,0 +1,28 @@
+{
+  "packages": [
+    {
+      "name": "CTT Arduino",
+      "maintainer": "CTT",
+      "websiteURL": "https://celltracktech.com/",
+
+      "platforms": [
+        {
+          "name": "CTT Boards",
+          "architecture": "avr",
+          "version": "1.0.0",
+          "category": "Contributed",
+          "url": "https://github.com/SuperCartman/TestArduino/raw/main/ctt-arduino-1.0.0.zip",
+          "archiveFileName": "ctt-boards-1.0.0.zip",
+          "checksum": "SHA-256:821d9c0b9df147c40342ee5b6d18c904269d3fbd177efc1ea05fbef411d597d0",
+          "size": "52138",
+          "boards": [
+            {"name": "Node Solar 328PB"}
+          ],
+          "toolsDependencies": []
+        }
+      ],
+
+      "tools": []
+    }
+  ]
+}
